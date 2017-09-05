@@ -103,6 +103,8 @@ function collisionDetection() {
 	}
 }
 
+
+
 function drawScore () {
 	ctx.font = "16px Arial";
 	changeColor();
@@ -136,6 +138,7 @@ function draw() {
 	drawLives();
 	collisionDetection();
 
+
 	if(y + dy < ballRadius) {
 		dy = -dy;
 	} else if (y + dy > canvas.height-ballRadius) {
@@ -167,7 +170,7 @@ function draw() {
 	else if(leftPressed && paddleX > 0) {
 		paddleX -= 7;
 	}
-
+	
 	x += dx;
 	y += dy;
 	requestAnimationFrame(draw);
